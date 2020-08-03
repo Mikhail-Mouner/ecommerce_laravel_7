@@ -48,6 +48,11 @@ class MainCategory extends Model
     {
         return $query->select('id' ,'translation_lang' ,'translation_of' ,'photo' ,'name' ,'slug' ,'active');
     }
+    
+    public function scopeDefaultCategory($query)
+    {
+        return $query->where('translation_of','0');
+    }
     /*****   /End  Local scope   *****/
     /*****   ***************   *****/
     

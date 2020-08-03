@@ -24,7 +24,7 @@
           <li>
             <a class="menu-item" href="{{ route('admin.main.categories.index') }}" data-i18n="nav.categories.2_column">
               <i class="la la-list-alt"></i>Categories
-              <span class="badge badge badge-success badge-pill float-right mr-2">{{ App\Models\MainCategory::count() }}</span>
+              <span class="badge badge badge-success badge-pill float-right mr-2">{{ App\Models\MainCategory::defaultCategory()->count() }}</span>
             </a>
           </li>
           <!-- /Setting Main Categories -->

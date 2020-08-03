@@ -40,7 +40,7 @@ class VendorRequest extends FormRequest
             case 'PATCH':
                 return [       
                     'name' => 'required|string|max:25',
-                    'password' => 'max:25',
+                    'password' => 'present|string|max:25',
                     'mobile' => 'required|numeric|unique:vendors,mobile,'.$this->id,
                     'address' => 'required',
                     'email' => 'required|email|unique:vendors,email,'.$this->id,
